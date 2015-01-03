@@ -56,7 +56,7 @@ public class ModelUser extends User {
     public MasterKey getKey() throws MasterKeyException {
         MasterKey key = super.getKey();
         if (!model.hasKeyID()) {
-            model.setKeyID( key.getKeyID() );
+           // model.setKeyID( key.getKeyID() );
             MPUserFileManager.get().save();
         } else if (!model.hasKeyID( key.getKeyID() )) {
             reset();
